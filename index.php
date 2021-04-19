@@ -18,4 +18,4 @@ echo '<br> Vitesse du véhicule : ' . $truck->getCurrentSpeed() . ' km/h' . '<br
 echo $truck->brake();
 echo '<br> Vitesse du véhicule : ' . $truck->getCurrentSpeed() . ' km/h' . '<br>';
 
-echo $truck->stockage(10);
+echo $truck->stockage(0);

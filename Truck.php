@@ -47,10 +47,14 @@ class Truck extends Vehicle
     public function stockage(int $stockage)
     {
         $this->setStockage($this->getStockage() + $stockage);
-        if ($this->getStockage() < $this->getStockageLimit()){
+        if ($this->getStockage() == 0){
             return "Le camion est vide";
-        } else {
+        } elseif($this->getStockage() > 0 && $this->getStockage() < $this->stockageLimit) {
+            return "Le camion est chargé";
+        } elseif($this->getStockage() == $this->stockageLimit){
             return "Le camion est plein";
+        } elseif ($this->getStockage() > $this->stockageLimit){
+            return "Le camion est surchargé";
         }
     }
 }
