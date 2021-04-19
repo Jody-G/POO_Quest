@@ -55,6 +55,8 @@ class Truck extends Vehicle
             return "Le camion est plein";
         } elseif ($this->getStockage() > $this->stockageLimit){
             return "Le camion est surchargé";
+        } else {
+            return "Error";
         }
     }
 }

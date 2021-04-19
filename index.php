@@ -6,6 +6,7 @@ require_once 'Truck.php';
 
 $car = new Car('green', 4, 'electric');
 $truck = new Truck('red', 6, 'gazol', 10);
+$truck2 = new Truck('blue', 8, 'gazol', 20);
 
 var_dump($car, $truck);
 
@@ -18,4 +19,5 @@ echo '<br> Vitesse du véhicule : ' . $truck->getCurrentSpeed() . ' km/h' . '<br
 echo $truck->brake();
 echo '<br> Vitesse du véhicule : ' . $truck->getCurrentSpeed() . ' km/h' . '<br>';
 
-echo $truck->stockage(0);
+echo $truck->stockage(10).'<br>';
+echo $truck2->stockage(20).'<br>';
